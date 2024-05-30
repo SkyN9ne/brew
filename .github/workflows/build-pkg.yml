@@ -34,7 +34,7 @@ jobs:
                   --filter .DS_Store \
                   --version ${{ steps.print-version.outputs.version }} \
                   Homebrew-${{ steps.print-version.outputs.version }}.pkg
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Homebrew ${{ steps.print-version.outputs.version }}
           path: Homebrew-${{ steps.print-version.outputs.version }}.pkg
